@@ -61,6 +61,9 @@ app.get('/sigup',(req, res)=> {
     res.sendFile(path.join(__dirname, 'signup.html'));
 });
 
+app.get('/',(req, res)=> {
+  res.sendFile(path.join(__dirname, 'login.html'));
+});
 app.post("/submit", (req, res) => {
   const { username, firstname, lastname, phone, email, address, city } =
     req.body;
