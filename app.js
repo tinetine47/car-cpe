@@ -12,7 +12,7 @@ const port = 3000 ;
 const pool = mysql.createPool({
     host: 'localhost',
     user: 'root',
-    database: 'user',
+    database: 'carmodels',
     waiForconnections: true,
     connectionLimit: 10,
     queueLimit: 0

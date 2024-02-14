@@ -5,10 +5,6 @@ const mysql = require('mysql');
 const cors = require('cors');
 const bcrypt = require('bcrypt');
 
-
-
-
-
 const app = express();
 const port= 3000;
 const saltRounds = 10;

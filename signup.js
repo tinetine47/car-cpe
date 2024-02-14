@@ -32,7 +32,7 @@ app.use(bodyParser.json());
 app.use(cors());
 
 app.get('/',(req, res)=> {
-    res.sendFile(path.join(__dirname, 'sigup.html'));
+    res.sendFile(path.join(__dirname, 'signup.html'));
 });
 
 app.post('/register',(req, res )=>{

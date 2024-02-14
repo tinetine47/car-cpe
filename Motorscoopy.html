@@ -8,6 +8,477 @@
     <link rel="stylesheet" href="chubby.css">
     <link rel="stylesheet" href="about.css">
     <link rel="stylesheet" href="detail.css">
+    <style>
+        * {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+.container {
+   max-width: 2000px;
+   margin: 0 auto;
+   
+}
+
+nav {
+   padding: 0.2rem;
+   background-color: rgb(0, 0, 0);
+
+   /* display: flex;
+   justify-content: space-between; */
+}
+
+.nav-con {
+   margin: 20px;
+   display: flex;
+   justify-content: space-between;
+   
+}
+.logo {
+   margin-top: 10px;
+}
+
+.logosize {
+   max-width: 5vw; 
+   max-width: 100px;
+}
+.logo img {
+   width: 100px; 
+   height: auto; 
+}
+
+.logo a {
+   color: rgb(255, 249, 249);
+   text-decoration: none;
+}
+
+
+
+.menu {
+   display: flex;
+   list-style: none;
+   align-items: center;
+}
+
+
+.menu li a {
+   color: aliceblue;
+   text-decoration: none;
+   padding: 0.5em; 
+   border-radius: 5px;
+   transition: all 0.3s ease;
+   font-size: 1.5vw ;
+   color: aliceblue;
+   text-decoration: none;
+   margin: 0 0.5rem;
+
+}
+
+.menu li a:hover {
+   background-color: #eee;
+   color: #000;
+}
+
+.hero{
+   background-color: rgb(176, 168, 168);
+}
+.hero-img{
+   width: 100%;
+}
+.blog-con {
+   margin: 30px;
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   column-gap: 2rem ;
+   text-align: center;  
+}
+
+
+@media (max-width: 700px) {
+   .blog-con {
+       grid-template-columns: 1fr ; /* เปลี่ยนจำนวนคอลัมน์เป็น 1 เมื่อหน้าจอย่อลง */
+   }
+}
+.blog-title {
+   margin: 2rem 0;
+   padding: 1px;
+
+}
+
+.blog-item img {
+   width: 15vw;
+   max-width: 100%;
+   border-radius: 5px;
+}
+.blog-item:hover{
+   width: 100%;
+   border-radius: 10px;
+   transform: scale(1.05);
+   margin-top: 1rem;
+   margin-bottom: 1rem;
+}
+.blog-item h4 {
+   margin-top: 1rem;
+   margin: 1rem 0;
+}
+
+.blog-item p {
+   margin: 1rem 0;
+}
+
+.main-menu {
+   max-width: 2000px;
+   margin: 0 auto;
+   padding: 1rem;
+}
+.blog-item {
+   transition: 0.3s;
+   margin: 1rem 0;
+}
+@media  (max-width: 768px) {
+   .blog-item img {
+       width: 300px; 
+   }
+}
+.blog-item a {
+   width: auto;
+   display: inline-block;
+   color: aliceblue;
+   background-color: rgb(96, 114, 218);
+   padding: .15rem 0.15rem;
+   text-decoration: none;
+   border-radius: 5px;
+   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.footer-top {
+   margin-top: 2rem;
+   padding: 3rem;
+   background-color: #585858;
+   color: #ffffff;
+   
+}
+
+.footer-top-con {
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   column-gap: 2rem;
+   
+}
+
+.footer-top-item-con {
+   display: flex;
+   margin: 1rem 0;
+   position: fixed;
+}
+
+.footer-top-item-con .data {
+   background-color: #fff;
+   color: black;
+   padding: 0.2rem;
+   border-radius: 5px;
+   text-align: center;
+   margin-right: 10px;
+}
+
+.footer-top-item:nth-child(2) h4 {
+   margin-bottom: 1rem;
+   /* margin: 1rem 0; */
+   column-gap: 2rem;
+}
+
+.footer-top-item:nth-child(3) h4 {
+   margin-bottom: 1rem;
+   /* margin: 1rem 0; */
+   column-gap: 2rem;
+}
+
+.tooltip {
+   position: relative;
+   display: inline-block;
+ }
+ 
+ .tooltip .tooltiptext {
+   visibility: hidden;
+   width: 120px;
+   background-color: #333;
+   color: #fff;
+   text-align: center;
+   border-radius: 6px;
+   padding: 5px 0;
+   position: absolute;
+   z-index: 1;
+   bottom: 125%;
+   left: 50%;
+   margin-left: -60px;
+   opacity: 0;
+   transition: opacity 0.3s;
+ }
+ 
+ .tooltip:hover .tooltiptext {
+   visibility: visible;
+   opacity: 1;
+ }
+.img-fluid{
+   width: 100%;
+   height: auto;
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ font-family: 'Poppins', sans-serif;
+}
+
+::-webkit-scrollbar {
+   width: 10px;
+}
+::-webkit-scrollbar-track {
+   background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+   background: #888;
+}
+::selection{
+ background: rgb(0,123,255,0.3);
+}
+.content{
+ max-width: 1250px;
+ margin: auto;
+ padding: 0 30px;
+}
+.navbar{
+
+ width: 100%;
+ z-index: 2;
+ padding: 5px 0;
+ transition: all 0.3s ease;
+}
+.navbar.sticky{
+ background: #1b1b1b;
+ padding: 10px 0;
+ box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.1);
+}
+.navbar .content{
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+}
+.navbar .logo a{
+ color: #fff;
+ font-size: 30px;
+ font-weight: 600;
+ text-decoration: none;
+}
+.navbar .menu-list{
+ display: inline-flex;
+}
+.menu-list li{
+ list-style: none;
+}
+.menu-list li a{
+ color: #fff;
+ font-size: 18px;
+ font-weight: 500;
+ margin-left: 25px;
+ text-decoration: none;
+ transition: all 0.3s ease;
+}
+.menu-list li a:hover{
+ color: #007bff;
+}
+
+.about{
+ padding: 30px 0;
+}
+.about .title{
+ font-size: 38px;
+ font-weight: 700;
+}
+.about p{
+ padding-top: 20px;
+ text-align: justify;
+}
+.icon{
+ color: #fff;
+ font-size: 20px;
+ cursor: pointer;
+ display: none;
+}
+.menu-list .cancel-btn{
+ position: absolute;
+ right: 30px;
+ top: 20px;
+}
+@media (max-width: 1230px) {
+ .content{
+   padding: 0 60px;
+ }
+}
+@media (max-width: 1100px) {
+ .content{
+   padding: 0 40px;
+ }
+}
+@media (max-width: 900px) {
+ .content{
+   padding: 0 30px;
+ }
+}
+@media (max-width: 868px) {
+ body.disabled{
+   overflow: hidden;
+ }
+ .icon{
+   display: block;
+ }
+ .icon.hide{
+   display: none;
+ }
+ .navbar .menu-list{
+   position: fixed;
+   border-radius: 10px;
+   width: 80%;
+   max-width: 400px;
+   left: -100%;
+   top: 0px;
+   display: block;
+   padding: 40px 0;
+   text-align: center;
+   background: #222;
+   transition: all 0.3s ease;
+ }
+ .navbar.show .menu-list{
+   left: 0%;
+ }
+ .navbar .menu-list li{
+   margin-top: 45px;
+ }
+ .navbar .menu-list li a{
+   font-size: 23px;
+   margin-left: -100%;
+   transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+ }
+ .navbar.show .menu-list li a{
+   margin-left: 0px;
+ }
+}
+@media (max-width: 380px) {
+ .navbar .logo a{
+   font-size: 27px;
+ }
+}
+.txt-main{
+   display: flex;
+}
+.about-img{
+   display: flex;
+   justify-content: center;
+   width: 100%;
+}
+.nav-detail{
+   width: 100%;
+   height: 100px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.box-detail{
+   font-size: 70px;
+   margin: 0 auto;
+   display: flex;
+
+}
+.box-txt{
+   font-size: 30px;
+   margin: 0 auto;
+   display: flex;
+
+}
+.name-container{
+   max-width: 2000px;
+   margin: 0 auto;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.car-name{
+   background: linear-gradient(100deg, #000, #494949);
+   color: white;
+   margin-top: 50px;
+   width: 700px;
+   height: 200px;
+   border-radius: 10px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+
+.carimg-container{
+   max-width: 1000px;
+   margin: 0 auto;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.motorimg-container{
+   padding: 100px;
+   max-width: 1000px;
+   margin: 0 auto;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.car-container{
+   max-width: 2000px;
+   margin: 0 auto;
+}
+.img-detail{
+   width: 100%;
+   margin: 0 auto;
+}
+.rent-container{
+   width: 100%;
+   height: 120px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.rent-botton{
+   font-size: 20px;
+   cursor: pointer;
+   width: 170px;
+   height: 90px;
+   background-color: black;
+   color: white;
+   border-radius: 5px;
+   transition: 0.3s;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.rent-botton:hover{
+   transform: scale(1.05);
+   transition: 0.3s;
+}
+@media(max-width:500px){
+   .img-detail{
+       width: 500px;
+   }
+   .box-detail{
+       margin: 30px;
+       font-size: 40px;
+   }
+   .box-txt{
+       margin: 10px;
+       font-size: 20px;
+   }
+}
+
+   </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 </head>
 <body>
@@ -20,16 +491,11 @@
             <div class="icon cancel-btn">
               <i class="fas fa-times"></i>
             </div>
-                    <li><a href="Home.html">Home</a></li>
-                    <li><a href="Aboutus.html">About Us</a></li>
-                    <li><a href="Home.html">Services</a></li>
-                    <li><a href="#contact">Contact Us</a></li>
-                    <li><a href="login/login.html">
-                        <i class="fa-solid fa-user tooltip">
-                            <span class="tooltiptext" style="font-size: 0.5vw;">Profile</span>
-                        </a>
-                        </i>
-                    </li>
+            <li><a href="/Home">Home</a></li>
+            <li><a href="/aboutus">About Us</a></li>
+            <li><a href="/Home">Services</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+            
           </ul>
           <div class="icon menu-btn">
             <i class="fas fa-bars"></i>
@@ -67,7 +533,7 @@
             </div>
         </div>
         <div class="motorimg-container">
-            <img class="img-detail" src="./img/Scoopy i.png" alt="">
+            <img class="img-detail" src="https://scontent.fcnx2-1.fna.fbcdn.net/v/t39.30808-6/427892211_2748102545348797_5377949608287261704_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=3635dc&_nc_eui2=AeEIjOniI5GXBK2QRUk46O_z_1ijvgjoaIv_WKO-COhoi-SMeipn5axHdXyzY_F7HIh7gAVtDwNTFtSGUIeWEHLf&_nc_ohc=KyWO5PWkHwAAX89mzI3&_nc_ht=scontent.fcnx2-1.fna&oh=00_AfD5_BncPPqlZvMG9PcuHFmcsyqPNhY8UeL0fY_wkJvgbA&oe=65D21DCC" alt="">
         </div>
         <div class="car-container">
             <div class="nav-detail">
@@ -96,7 +562,7 @@
             </div>
         </div>
         <div class="rent-container">
-            <a href="information.html">
+            <a href="/information">
                 <botton class="rent-botton">RENT</botton>
             </a>
         </div>

@@ -31,6 +31,24 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(cors());
 
+app.get("/car", (req, res) => {
+  res.sendFile(path.join(__dirname, "Cardetail.html"));
+});
+app.get("/pcx", (req, res) => {
+  res.sendFile(path.join(__dirname, "Motorpcx.html"));
+});
+app.get("/scoop", (req, res) => {
+  res.sendFile(path.join(__dirname, "Motorscoopy.html"));
+});
+
+app.get("/aboutus", (req, res) => {
+  res.sendFile(path.join(__dirname, "Aboutus.html"));
+});
+
+app.get("/Home", (req, res) => {
+  res.sendFile(path.join(__dirname, "Home.html"));
+});
+
 app.get("/information", (req, res) => {
   res.sendFile(path.join(__dirname, "information.html"));
 });
@@ -40,7 +58,7 @@ app.get('/login',(req, res)=> {
 });
 
 app.get('/sigup',(req, res)=> {
-    res.sendFile(path.join(__dirname, 'sigup.html'));
+    res.sendFile(path.join(__dirname, 'signup.html'));
 });
 
 app.post("/submit", (req, res) => {
